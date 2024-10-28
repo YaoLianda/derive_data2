@@ -1,0 +1,94 @@
+
+
+opers = [
+{
+    "index":0,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":3033,"isNoise":"True"},
+        {"index":1,"oper_type":"malloc","size":1040,"isNoise":"True"},
+    ]
+},#dbf malloc
+{
+    "index":1,
+    "primitive":[
+        {"index":0,"oper_type":"free","object":(0,0),"isNoise":"True"},
+        {"index":1,"oper_type":"malloc","size":280,"isNoise":"True"}
+    ]#dbf free
+},
+{
+    "index":2,
+    "primitive":[
+        {"index":0,"oper_type":"read","object":(0,0),"size":16,"isNoise":"True"}
+    ]
+},
+{
+    "index":3,
+    "primitive":[
+        {"index":0,"oper_type":"free","object":(0,0),"isNoise":"True"}
+    ]#uaf free
+},
+{
+    "index":4,
+    "primitive":[
+        {"index":0,"oper_type":"read","object":(0,0),"size":16,"isNoise":"True"},
+        {"index":1,"oper_type":"malloc","size":3033,"isNoise":"True"},
+        {"index":2,"oper_type":"malloc","size":16,"isNoise":"True"}
+    ]
+},
+{
+    "index":5,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":280,"isNoise":"True"},
+        {"index":1,"oper_type":"free","object":(0,1),"isNoise":"True"}
+    ]
+},
+{
+    "index":6,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":281,"isNoise":"True"},
+    ]
+},{
+    "index":7,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":3033,"isNoise":"True"},
+    ]
+},{
+    "index":8,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":280,"isNoise":"True"},
+    ]
+},
+{
+    "index":9,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":280,"isNoise":"True"},
+    ]
+},
+{
+    "index":10,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":280,"isNoise":"True"},
+    ]
+},{
+    "index":11,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":280,"isNoise":"True"},
+    ]
+},
+{
+    "index":12,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":280,"isNoise":"True"},
+    ]
+},
+{
+    "index":13,
+    "primitive":[
+        {"index":0,"oper_type":"malloc","size":3035,"isNoise":"True"},
+    ]
+}
+
+]
+vuln =[{"type":"uaf","producer":[(0,0),(1,0),(2,0)]},
+       {"type":"uaf","producer":[(0,0),(3,0),(2,0)]},
+       {"type":"uaf","producer":[(0,0),(3,0),(4,0)]}]
